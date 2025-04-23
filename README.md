@@ -10,4 +10,5 @@ Design patterns capture solutions that have developed and evolved over time.
 6. Prototype
 7. Adapter
 8. Facade
+9. Singleton
 
