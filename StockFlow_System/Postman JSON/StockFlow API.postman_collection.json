@@ -1,0 +1,668 @@
+{
+	"info": {
+		"_postman_id": "bca89eba-eca3-4697-b64f-65ee8cf88197",
+		"name": "StockFlow API",
+		"description": "Collection of API endpoints for StockFlow inventory management system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38547205",
+		"_collection_link": "https://design-patterns-project-5950.postman.co/workspace/Design-Patterns-Project-Workspa~e8a1475b-37ea-49e9-8e3f-be25ac017709/collection/38547205-bca89eba-eca3-4697-b64f-65ee8cf88197?action=share&source=collection_link&creator=38547205"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Save Product 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productName\": \"Brake Pads\",\n  \"quantity\": 150,\n  \"price\": 59.99\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Product 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productName\": \"Air Filter\",\n  \"quantity\": 200,\n  \"price\": 15.99\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/getProduct/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"getProduct",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"productName\": \"Air Filter New\",\n  \"quantity\": 200,\n  \"price\": 16.99\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Product management endpoints"
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Save Customer 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ownerName\": \"John\",\n  \"companyName\": \"Mercedes\",\n  \"zipcode\": \"02119\",\n  \"orders\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Customer 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ownerName\": \"Danny\",\n  \"companyName\": \"BMW\",\n  \"zipcode\": \"02115\",\n  \"orders\": []\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer/getCustomer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"getCustomer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ownerName\": \"Shreyas Kothari\",\n  \"companyName\": \"BMW\",\n  \"zipcode\": \"02120\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/customer/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/customer/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Customer management endpoints"
+		},
+		{
+			"name": "Purchase Order",
+			"item": [
+				{
+					"name": "Place order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"paymentDueDate\": \"2025-05-30\",\n  \"paid\": true,\n  \"customer\": {\n    \"id\": 1\n  },\n  \"products\": [\n    {\n        \"product\":{\n            \"productId\": 1\n        },\n        \"productPOQuantity\": 50\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/purchaseOrder/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"purchaseOrder",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Orders",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/purchaseOrder/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"purchaseOrder",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Order State",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/purchaseOrder/changeState/1?newState=PROCESSING",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"purchaseOrder",
+								"changeState",
+								"1"
+							],
+							"query": [
+								{
+									"key": "newState",
+									"value": "PROCESSING"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Revert Order State",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/purchaseOrder/undoLastOperation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"purchaseOrder",
+								"undoLastOperation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order by Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/purchaseOrder/getPurchaseOrder/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"purchaseOrder",
+								"getPurchaseOrder",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Purchase order management endpoints"
+		},
+		{
+			"name": "Billing Slip",
+			"item": [
+				{
+					"name": "Generate Billing Slip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/billing/generateBillingSlip/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"billing",
+								"generateBillingSlip",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Billing Slips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/billing/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"billing",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Billing slip management endpoints"
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Save Employee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"designation\": \"Inventory Manager\",\n  \"dob\": \"1985-01-20\",\n  \"fullName\": \"Jane Smith\",\n  \"password\": \"securepassword\",\n  \"rating\": 4.5,\n  \"salary\": 25000,\n  \"username\": \"jsmith\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employee/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"jsmith\",\n  \"password\": \"securepassword\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employee/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employee/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employee by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employee/getEmployee/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"getEmployee",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"designation\": \"Inventory Manager\",\n  \"dob\": \"1985-01-20\",\n  \"fullName\": \"Jane Smith\",\n  \"password\": \"newsecurepassword\",\n  \"rating\": 4.5,\n  \"salary\": 25000,\n  \"username\": \"jsmith\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/employee/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/employee/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employee",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Employee management endpoints"
+		}
+	]
+}
